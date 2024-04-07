@@ -1,4 +1,6 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
-<p>hello</p>
-<p><%=@hello%></p>
+<% if logged_in?%>
+    <h1>home</h1>
+    <h4>こんにちは,<%=current_user.name%>さん</h4>
+<% else %>
+    <h4>ログインしてください</h4>
+<%end%>
